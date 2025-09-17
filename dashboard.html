@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Agendamento - SENAI</title>
+    <link rel="stylesheet" href="dash.css">
+</head>
+<body>
+    <!-- Partículas de fundo -->
+    <div class="background-container">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <!-- Header com logo e usuário -->
+    <header class="dashboard-header">
+        <div class="logo">
+            <img src="senai.svg" alt="SENAI Logo">
+        </div>
+        <div class="user-info">
+            <span>Bem-vindo, <strong id="user-name">Usuário</strong></span>
+            <button onclick="logout()" class="logout-btn">Sair</button>
+        </div>
+    </header>
+
+    <!-- Container principal -->
+    <div class="dashboard-container">
+        <!-- Lista de Salas -->
+        <div class="rooms-section">
+            <h2>Selecione uma Sala para Agendar</h2>
+            <div id="roomsList" class="rooms-list">
+                <!-- As salas serão carregadas aqui pelo JavaScript -->
+            </div>
+        </div>
+
+        <!-- Tela de Agendamento -->
+        <div id="scheduleView" class="schedule-section" style="display: none;">
+            <div class="schedule-header">
+                <h3 id="scheduleTitle">Agendamento para: Sala</h3>
+                <button onclick="hideSchedule()" class="close-btn">✕</button>
+            </div>
+            
+            <!-- Seleção de Data -->
+            <div class="date-selection">
+                <label for="selectedDate">Selecione a Data:</label>
+                <input type="date" id="selectedDate" onchange="updateTimeSlots()">
+            </div>
+
+            <!-- Lista de Horários -->
+            <div class="time-section">
+                <h4>Horários Disponíveis</h4>
+                <div id="timeList" class="time-list">
+                    <!-- Os horários serão carregados aqui pelo JavaScript -->
+                </div>
+            </div>
+
+            <!-- Botão de Agendamento -->
+            <div class="booking-actions">
+                <button onclick="bookAppointment()" class="btn-book">Confirmar Agendamento</button>
+            </div>
+        </div>
+
+        <!-- Seção de Meus Agendamentos -->
+        <div class="my-bookings-section">
+            <h3>Meus Agendamentos</h3>
+            <div id="myBookingsList" class="bookings-list">
+                <!-- Os agendamentos do usuário serão listados aqui -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
