@@ -421,6 +421,8 @@ footer {
 }
 
 .my-bookings-section {
+    box-shadow: #c00000 0px 0px 10px 0px;
+    text-align: center;
     background-color: rgba(245, 245, 245, 0.1);
     border-radius: 10px;
     padding: 25px;
