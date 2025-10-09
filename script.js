@@ -1,7 +1,7 @@
 
 const professoresAutorizados = [
     { email: "testesocialxx@gmail.com", cpf: "47753467840" },
-    { email: "professor2@senai.sp.gov.br", cpf: "98765432100" },
+    { email: "danielfrancocrz@gmail.com", cpf: "12345678910" },
     { email: "coordenadora@senai.sp.gov.br", cpf: "11122233344" },
     { email: "maria.silva@senai.sp.gov.br", cpf: "55566677788" }
   ];
